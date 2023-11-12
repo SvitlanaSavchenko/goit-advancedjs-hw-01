@@ -38,6 +38,12 @@ form.addEventListener('submit', function (event) {
   };
   console.log(formData);
 
+  // Перевірка, чи заповнені два поля форми
+  if (emailInput.value.trim() && messageInput.value.trim()) {
+    // Сабмітити форму
+    event.preventDefault();
+  }
+
   // Очищення полів форми
   emailInput.value = '';
   messageInput.value = '';
